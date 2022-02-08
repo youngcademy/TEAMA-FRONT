@@ -9,17 +9,23 @@
     padding: 0;
     list-style: none;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     li {
+      width: 100%;
       padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       cursor: pointer;
       svg {
         fill: white;
         width: 24px;
         height: 24px;
+      }
+      &:hover {
+        background-color: #536dfe;
+        svg {
+          fill: black;
+        }
       }
     }
   }
