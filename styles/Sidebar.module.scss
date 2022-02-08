@@ -1,0 +1,30 @@
+.wrapper {
+  height: 100vh;
+  background-color: black;
+  width: 96px;
+  transition: all 0.3s ease;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li {
+      padding: 20px;
+      cursor: pointer;
+      svg {
+        fill: white;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.active {
+  width: 150px;
+}
