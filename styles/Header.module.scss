@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
   background-color: #536dfe;
-  color: black;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,5 +25,6 @@
     margin: 0px 10px;
     width: 28px;
     height: 28px;
+    fill: white;
   }
 }

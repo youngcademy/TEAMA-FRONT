@@ -14,7 +14,7 @@ function Layout({ children }: LayoutProps) {
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className={styles.wrapper}>
         <SideBar menuOpen={menuOpen} />
-        {children}
+        <div className={styles.content}>{children}</div>
       </div>
     </>
   );
