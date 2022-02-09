@@ -23,7 +23,7 @@ export default function SelectLabels() {
         >
         </Select>
       </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 200 }}>
+      <FormControl sx={{ m: 1, minWidth: 220 }}>
         <Select
           value={announcement}
           onChange={handleChange}
