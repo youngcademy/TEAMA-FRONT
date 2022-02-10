@@ -5,7 +5,7 @@ import Item from "../components/notice_components/Item";
 import { useRouter } from "next/router";
 import Select from "../components/notice_components/Select";
 import MyBtn from '../components/notice_components/UndoBtn';
-import Btn from "../components/notice_components/Btn";
+import Btn from "../components/notice_components/WritingBtn";
 
 export default function notice () {
     const router = useRouter();

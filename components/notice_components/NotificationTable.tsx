@@ -20,6 +20,8 @@ import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
+import WriteBtn from "./WritingBtn";
+import { positions } from '@mui/system';
 
 interface Data {
   calories: number;
@@ -398,10 +400,17 @@ export default function EnhancedTable() {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Paper>
-      <FormControlLabel
-        control={<Switch checked={dense} onChange={handleChangeDense} />}
-        label="Dense padding"
-      />
+      <Box sx={{flexDirection: 'row', justifyContent: 'center'}}>
+            <Box sx={{display: 'inline-block', width: '1/4'}}>
+                <FormControlLabel
+                    control={<Switch checked={dense} onChange={handleChangeDense} />}
+                    label="Dense padding"
+                />
+            </Box>
+            <Box sx={{display: 'inline-block', width: '1/4', position : 'absolute', right: '20px'}}>
+                <WriteBtn/>
+            </Box>
+      </Box>
     </Box>
   );
 }

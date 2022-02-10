@@ -7,11 +7,10 @@ import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
 const MenuProps = {
   PaperProps: {
     style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      maxHeight: ITEM_HEIGHT * 4.5,
       width: 250,
     },
   },
@@ -65,7 +64,7 @@ export default function NotificationSelect() {
           >
           </Select>
     </FormControl>	
-      <FormControl sx={{ m: 1, width: 300 }}>
+      <FormControl sx={{ m: 1, width: 220 }}>
         <InputLabel id="notification-name-label">Types</InputLabel>
         <Select
           labelId="notification-name-label"

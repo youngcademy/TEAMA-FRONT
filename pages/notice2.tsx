@@ -4,7 +4,7 @@ import { Grid, Box} from '@mui/material';
 import Item from "../components/notice_components/Item";
 import { useRouter } from "next/router";
 import Select from "../components/notice_components/Select";
-import ReturnButton from "../components/notice_components/Btn";
+import ReturnButton from "../components/notice_components/WritingBtn";
 import Link from 'next/link'
 
 export default function notice () {
