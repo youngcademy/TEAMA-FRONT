@@ -1,42 +1,89 @@
 import * as React from 'react';
+import { Theme, useTheme } from '@mui/material/styles';
+import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
-export default function SelectLabels() {
-  const [announcement, setAnnouncement] = React.useState('');
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+  PaperProps: {
+    style: {
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      width: 250,
+    },
+  },
+};
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setAnnouncement(event.target.value);
+const names = [
+  "All",
+  "General Announcement",
+  "Special Announcement",
+  "Event Announcement",
+  "Caution",
+];
+
+///////////////////////////////////////////////////////////////
+
+
+function getStyles(name: string, personName: string[], theme: Theme) {
+  return {
+    fontWeight:
+      personName.indexOf(name) === -1
+        ? theme.typography.fontWeightRegular
+        : theme.typography.fontWeightMedium,
+  };
+}
+
+export default function NotificationSelect() {
+  const theme = useTheme();
+  const [notificationName, setNotificationName] = React.useState<string[]>([]);
+
+  const handleChange = (event: SelectChangeEvent<typeof notificationName>) => {
+    const {
+      target: { value },
+    } = event;
+    setNotificationName(
+      // On autofill we get a stringified value.
+      typeof value === 'string' ? value.split(',') : value,
+    );
   };
 
   return (
     <div>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-helper-label">Notice</InputLabel>
+		<FormControl sx={{ m: 1, minWidth: 120 }}>
+      <InputLabel id="demo-simple-select-helper-label">
+        Notice
+      </InputLabel>
+          <Select
+            labelId="demo-simple-select-helper-label"
+            id="demo-simple-select-helper"
+            value={""}
+            label=""
+          >
+          </Select>
+    </FormControl>	
+      <FormControl sx={{ m: 1, width: 300 }}>
+        <InputLabel id="notification-name-label">Types</InputLabel>
         <Select
-          labelId="demo-simple-select-helper-label"
-          id="demo-simple-select-helper"
-          value={announcement}
-          label="Age"
-        >
-        </Select>
-      </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 220 }}>
-        <Select
-          value={announcement}
+          labelId="notification-name-label"
+          id="notification-name"
+          value={notificationName}
           onChange={handleChange}
-          displayEmpty
-          inputProps={{ 'aria-label': 'Without label' }}>
-
-            <MenuItem value="">
-                <em>None</em>
+          input={<OutlinedInput label="Name" />}
+          MenuProps={MenuProps}
+        >
+          {names.map((name) => (
+            <MenuItem
+              key={name}
+              value={name}
+              style={getStyles(name, notificationName, theme)}
+            >
+              {name}
             </MenuItem>
-          <MenuItem value={10}>General Announcement</MenuItem>
-          <MenuItem value={20}>Special Announcement</MenuItem>
-          <MenuItem value={30}>Event Announcement</MenuItem>
-          <MenuItem value={40}>Caution</MenuItem>          
+          ))}
         </Select>
       </FormControl>
     </div>

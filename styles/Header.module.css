@@ -1,0 +1,48 @@
+.wrapper {
+  width: 100%;
+  background-color: #536dfe;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 64px;
+}
+
+.wrapper .header_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .header_left h6 {
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.wrapper .header_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper svg {
+  cursor: pointer;
+  margin: 0px 10px;
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+/*# sourceMappingURL=Header.module.css.map */
