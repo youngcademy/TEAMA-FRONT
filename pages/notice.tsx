@@ -10,8 +10,8 @@ import IconButton from '@mui/material/IconButton';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Stack from '@mui/material/Stack';
-import MyButton from '../components/notice_components/TestBtn';
-import MyBtn from '../components/notice_components/TestBtn';
+import MyButton from '../components/notice_components/UndoBtn';
+import MyBtn from '../components/notice_components/UndoBtn';
 
 export default function notice () {
     const router = useRouter();
