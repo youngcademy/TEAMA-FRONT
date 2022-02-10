@@ -28,7 +28,7 @@ export default function notice () {
                 flexGrow: 1 }}>
                         {/*1열 : 공지사항 종류 검색 + return 버튼*/}
                         <Item sx={{flexWrap: 'wrap', minWidth: 'min-content',  gridRow: '1', gridColumn: '1/6' }}><Select/></Item>
-                        <Item sx={{ gridRow: '1', gridColumn: '10/12' }}>
+                        <Item sx={{ gridRow: '1', gridColumn: '11/12', justifyContent: 'center'}}>
                             <MyBtn />
                         </Item>
                         {/*2열 : 공지사항 종류, 위의 Select 내부 값을 받아서*/}
