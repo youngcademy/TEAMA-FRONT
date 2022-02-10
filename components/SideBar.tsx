@@ -11,6 +11,7 @@ function SideBar({ menuOpen }: ISideBarMenuProps) {
     <div className={`${styles.wrapper} ${menuOpen && styles.active}`}>
       <ul>
         <li>
+          <Link href="/"> 
           <svg
             focusable="false"
             aria-hidden="true"
@@ -19,6 +20,7 @@ function SideBar({ menuOpen }: ISideBarMenuProps) {
           >
             <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
           </svg>
+          </Link>
         </li>
         <li>
           <svg

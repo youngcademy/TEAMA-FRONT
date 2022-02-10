@@ -5,14 +5,14 @@ import Item from "../components/notice_components/Item";
 import { useRouter } from "next/router";
 import Select from "../components/notice_components/Select";
 import MyBtn from '../components/notice_components/UndoBtn';
-import WriteBtn from "../components/notice_components/WritingBtn";
+import Btn from "../components/notice_components/Btn";
 
 export default function notice () {
     const router = useRouter();
     return (
         <div>
             <Head>
-                <title>Notice Board</title>
+                <title>Writing Notice</title>
             </Head>
             <Box sx={{ 
                 display: 'grid',
@@ -21,9 +21,7 @@ export default function notice () {
                 gap: 1,
                 flexGrow: 1 }}>
                         {/*1열 : 공지사항 종류 검색 + return 버튼*/}
-                        <Item sx={{flexWrap: 'wrap', minWidth: 'min-content',  gridRow: '1', gridColumn: '1/6' }}>
-                            <Select/>
-                        </Item>
+                        <Item sx={{flexWrap: 'wrap', minWidth: 'min-content',  gridRow: '1', gridColumn: '1/6' }}><Select/></Item>
                         <Item sx={{ gridRow: '1', gridColumn: '11/12', justifyContent: 'center'}}>
                             <MyBtn />
                         </Item>
@@ -40,7 +38,7 @@ export default function notice () {
                         <Item sx={{ gridRow: '5', gridColumn: '1/12' }}>[리스트]</Item>
                         {/*6열 : 1,2,3,4,5 페이지 버튼 + 글쓰기*/}
                         <Item sx={{ gridRow: '6', gridColumn: '1/10' }}>1,2,3,4,5</Item>
-                        <Item sx={{ gridRow: '6', gridColumn: '11/12' }}><WriteBtn/></Item>
+                        <Item sx={{ gridRow: '6', gridColumn: '10/12' }}>글쓰기</Item>
             </Box>
         </div>
     )
