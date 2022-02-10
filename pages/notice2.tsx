@@ -1,17 +1,11 @@
 import React from 'react';
 import Head from "next/head";
-import { Grid, Box, Button} from '@mui/material';
+import { Grid, Box} from '@mui/material';
 import Item from "../components/notice_components/Item";
 import { useRouter } from "next/router";
 import Select from "../components/notice_components/Select";
 import ReturnButton from "../components/notice_components/Btn";
 import Link from 'next/link'
-import IconButton from '@mui/material/IconButton';
-import PhotoCamera from '@mui/icons-material/PhotoCamera';
-import DeleteIcon from '@mui/icons-material/Delete';
-import Stack from '@mui/material/Stack';
-import MyButton from '../components/notice_components/TestBtn';
-import MyBtn from '../components/notice_components/TestBtn';
 
 export default function notice () {
     const router = useRouter();
@@ -28,9 +22,7 @@ export default function notice () {
                 flexGrow: 1 }}>
                         {/*1열 : 공지사항 종류 검색 + return 버튼*/}
                         <Item sx={{flexWrap: 'wrap', minWidth: 'min-content',  gridRow: '1', gridColumn: '1/6' }}><Select/></Item>
-                        <Item sx={{ gridRow: '1', gridColumn: '10/12' }}>
-                            <MyBtn />
-                        </Item>
+                        <Item sx={{ gridRow: '1', gridColumn: '10/12' }}><ReturnButton/></Item>
                         {/*2열 : 공지사항 종류, 위의 Select 내부 값을 받아서*/}
                         <Item sx={{ gridRow: '2', gridColumn: '1/12' }}>공지사항 종류</Item>
                         {/*3열 : 검색 조건, 검색 키워드, 검색 버튼*/}
