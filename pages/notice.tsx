@@ -10,7 +10,7 @@ import names from "../components/notice_components/Select";
 import NotiTable from "../components/notice_components/NotificationTable";
 import SearchText from "../components/notice_components/SearchTextField";
 import SearchOption from "../components/notice_components/SearchOptionSelect";
-import InputText from "../components/notice_components/InputText";
+import InputText from "../components/notice_components/InputTextwIcon";
 
 export default function notice () {
     const router = useRouter();
