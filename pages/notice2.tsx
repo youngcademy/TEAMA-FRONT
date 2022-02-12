@@ -10,7 +10,7 @@ import Link from 'next/link'
 export default function notice () {
     const router = useRouter();
     return (
-        <div>
+        <>
             <Head>
                 <title>Notice Board</title>
             </Head>
@@ -38,6 +38,6 @@ export default function notice () {
                         <Item sx={{ gridRow: '6', gridColumn: '1/10' }}>1,2,3,4,5</Item>
                         <Item sx={{ gridRow: '6', gridColumn: '10/12' }}>글쓰기</Item>
             </Box>
-        </div>
+        </>
     )
 };

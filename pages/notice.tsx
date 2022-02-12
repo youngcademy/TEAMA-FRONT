@@ -15,7 +15,7 @@ import InputText from "../components/notice_components/InputTextwIcon";
 export default function notice () {
     const router = useRouter();
     return (
-        <div>
+        <>
             <Head>
                 <title>Notice Board</title>
             </Head>
@@ -51,6 +51,6 @@ export default function notice () {
                     <NotiTable/>
                 </Box>
             </Box>
-        </div>
+        </>
     )
 };

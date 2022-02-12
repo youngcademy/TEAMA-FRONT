@@ -15,7 +15,7 @@ import ExitBtn from "../components/notice_components/ExitBtn";
 export default function notice () {
     const router = useRouter();
     return (
-        <div>
+        <>
             <Head>
                 <title>Writing Notice</title>
             </Head>
@@ -47,6 +47,6 @@ export default function notice () {
                         <Item sx={{ gridRow: '6', gridColumn: '1/10' }}><TextArea/></Item>
                         <Item sx={{ gridRow: '7', gridColumn: '11/12'}}><ExitBtn/></Item>
             </Box>
-        </div>
+        </>
     )
 };
