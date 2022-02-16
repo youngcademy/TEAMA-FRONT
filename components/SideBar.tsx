@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import styles from "../styles/Sidebar.module.scss";
 
@@ -19,16 +20,18 @@ function SideBar({ menuOpen }: ISideBarMenuProps) {
             <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
           </svg>
         </li>
-        <li>
-          <svg
-            focusable="false"
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            data-testid="Typo"
-          >
-            <path d="M9 4v3h5v12h3V7h5V4H9zm-6 8h3v7h3v-7h3V9H3v3z"></path>
-          </svg>
-        </li>
+        <Link href={"/Position/Position"}>
+          <li>
+            <svg
+              focusable="false"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              data-testid="Typo"
+            >
+              <path d="M9 4v3h5v12h3V7h5V4H9zm-6 8h3v7h3v-7h3V9H3v3z"></path>
+            </svg>
+          </li>
+        </Link>
         <li>
           <svg
             focusable="false"
