@@ -10,56 +10,49 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
 export default function TextFields() {
+    const [formats, setFormats] = React.useState(() => ['', '']);
     const [value, setValue] = React.useState('Controlled');
-    const [formats, setFormats] = React.useState(() => []);
-    const handleFormat = (
-      event: React.MouseEvent<HTMLElement>,
-      newFormats: string[],
-    ) => {
-      setFormats(newFormats);
-    };  
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       setValue(event.target.value);
     };
+    const handleFormat = (
+      _event: React.MouseEvent<HTMLElement>,
+      newFormats: string[],
+    ) => {
+      setFormats(newFormats);
+    };
   
     return (
-        <>
-        <ToggleButtonGroup
-        value={formats}
-        onChange={handleFormat}
-        aria-label="text formatting"
-      >
-        <ToggleButton value="bold" aria-label="bold" aria-disabled="false" aria-pressed="false">
-          <FormatBoldIcon />
-        </ToggleButton>
-        <ToggleButton value="italic" aria-label="italic">
-          <FormatItalicIcon />
-        </ToggleButton>
-        <ToggleButton value="underlined" aria-label="underlined">
-          <FormatUnderlinedIcon />
-        </ToggleButton>
-        <ToggleButton value="color" aria-label="color" disabled>
-          <FormatColorFillIcon />
-          <ArrowDropDownIcon />
-        </ToggleButton>
-      </ToggleButtonGroup>
-
-            <Box
-                component="form"
-                sx={{
-                '& .MuiTextField-root': { mr: 1, width: '100%' },
-                }}
-                noValidate
-                autoComplete="off"
-            >
-                <div>
-                    <TextField
-                    id="outlined-multiline-static"
-                    multiline
-                    rows={10}
-                    />
-                </div>
-            </Box>
-        </>
+        <Box
+          sx={{
+            '& .MuiTextField-root': { mr: 1, width: '100%' },
+            }}
+        >
+          <ToggleButtonGroup
+            value={formats}
+            onChange={handleFormat}
+            aria-label="text formatting"
+          >
+            <ToggleButton id="Bold" value="bold" aria-label="bold">
+              <FormatBoldIcon />
+            </ToggleButton>
+            <ToggleButton value="italic" aria-label="italic">
+              <FormatItalicIcon />
+            </ToggleButton>
+            <ToggleButton value="underlined" aria-label="underlined">
+              <FormatUnderlinedIcon />
+            </ToggleButton>
+            <ToggleButton value="color" aria-label="color" disabled>
+              <FormatColorFillIcon />
+              <ArrowDropDownIcon />
+            </ToggleButton>
+          </ToggleButtonGroup>
+                <TextField
+                  id="outlined-multiline-static"
+                  multiline
+                  rows={10}          
+                  />
+                  &nbsp;
+      </Box>
     );
   }

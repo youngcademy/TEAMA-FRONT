@@ -74,13 +74,13 @@ export default function NotificationSelect() {
           input={<OutlinedInput label="Name" />}
           MenuProps={MenuProps}
         >
-          {names.map((name) => (
+          {names.map((names) => (
             <MenuItem
-              key={name}
-              value={name}
-              style={getStyles(name, notificationName, theme)}
+              key={names}
+              value={names}
+              style={getStyles(names, notificationName, theme)}
             >
-              {name}
+              {names}
             </MenuItem>
           ))}
         </Select>
@@ -88,3 +88,4 @@ export default function NotificationSelect() {
     </div>
   );
 }
+

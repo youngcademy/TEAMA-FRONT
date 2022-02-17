@@ -11,6 +11,8 @@ import InputText from "../components/notice_components/InputText";
 import TextArea from "../components/notice_components/TextArea";
 import OneInput from "../components/notice_components/OneInput";
 import ExitBtn from "../components/notice_components/ExitBtn";
+import TT from "../components/notice_components/TestText";
+
 
 export default function notice () {
     const router = useRouter();
