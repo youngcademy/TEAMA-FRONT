@@ -12,7 +12,8 @@ import TextArea from "../components/notice_components/TextArea";
 import OneInput from "../components/notice_components/OneInput";
 import ExitBtn from "../components/notice_components/ExitBtn";
 import TT from "../components/notice_components/TestText";
-
+import TextEditor from '../components/notice_components/TextEditor';
+import 'react-quill/dist/quill.snow.css'
 
 export default function notice () {
     const router = useRouter();
@@ -38,16 +39,20 @@ export default function notice () {
                             <Ebtn />
                         </Item>
                         {/*2열 : 공지사항 종류 결정*/}
-                        <Item sx={{ gridRow: '2', gridColumn: '1/4', minWidth: 'min-content' }}>
+                        <Item sx={{ gridRow: '2', gridColumn: '1/10', minWidth: 'min-content' }}>
                             <Select/>
                         </Item>
-                        <Item sx={{ gridRow: '3', gridColumn: '1/10' }}><OneInput/></Item>
+                        <Item sx={{ gridRow: '3', gridColumn: '1/10', maxWidth: '900px' }}><OneInput/></Item>
                         {/*3열 : 검색 조건, 검색 키워드, 검색 버튼*/}
-                        <Item sx={{ gridRow: '4', gridColumn: '1/10' }}>툴바 1: 사진, 일정 표</Item>
-                        {/*4열 : 번호, 태그, 제목, 작성자 등 분류 조건*/}
                         {/*5열 : 공지사항 리스트*/}
-                        <Item sx={{ gridRow: '6', gridColumn: '1/10' }}><TextArea/></Item>
-                        <Item sx={{ gridRow: '7', gridColumn: '11/12'}}><ExitBtn/></Item>
+                        <Box sx={{ gridRow: '4', 
+                                   gridColumn: '1/10', 
+                                   minWidth: 'min-content', 
+                                   maxWidth: '900px', 
+                                   Height: 'min-content' }}>
+                                       <TextEditor style={{height:"400px", width:"700px"}}/>
+                        </Box>
+                        <Item sx={{ gridRow: '5', gridColumn: '11/12'}}><ExitBtn/></Item>
             </Box>
         </>
     )
