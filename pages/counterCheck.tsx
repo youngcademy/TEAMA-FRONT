@@ -10,19 +10,14 @@ const Counter: NextPage = (props: any) => {
   const { resolvedUrl } = props;
   const value = useSelector(counter.selectCounter);
   // const value = 0;
+  const [countNumber, setCountNumber] = useState(value.number);
 
   return (
     <div>
       <h1>{resolvedUrl}</h1>
-      <h1>{value.number}</h1>
+      <h1>{countNumber}</h1>
       <button onClick={() => dispatch(counter.increment())}> + </button>
       <button onClick={() => dispatch(counter.decrement())}> - </button>
-      <p>
-        Navigate to
-        <Link href="/counterCheck">
-          <a> check </a>
-        </Link>
-      </p>
     </div>
   );
 };
@@ -30,7 +25,6 @@ const Counter: NextPage = (props: any) => {
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) =>
     async ({ resolvedUrl }) => {
-      store.dispatch(counter.incrementByAmount(8));
       return {
         props: {
           resolvedUrl,
