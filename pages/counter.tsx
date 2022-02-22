@@ -30,7 +30,7 @@ const Counter: NextPage = (props: any) => {
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) =>
     async ({ resolvedUrl }) => {
-      store.dispatch(counter.incrementByAmount(8));
+      store.dispatch(counter.increment());
       return {
         props: {
           resolvedUrl,

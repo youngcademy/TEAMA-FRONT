@@ -18,6 +18,9 @@ const Counter: NextPage = (props: any) => {
       <h1>{countNumber}</h1>
       <button onClick={() => dispatch(counter.increment())}> + </button>
       <button onClick={() => dispatch(counter.decrement())}> - </button>
+      <Link href="/counter">
+        <a>{resolvedUrl}</a>
+      </Link>
     </div>
   );
 };
