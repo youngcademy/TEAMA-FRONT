@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { useCallback, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { wrapper } from "../store";
-import * as counter from "../store/modules/counter";
+import * as counter from "../store/slices/counter";
 import Link from "next/link";
 
 const Counter: NextPage = (props: any) => {
@@ -30,7 +30,6 @@ const Counter: NextPage = (props: any) => {
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) =>
     async ({ resolvedUrl }) => {
-      store.dispatch(counter.increment());
       return {
         props: {
           resolvedUrl,

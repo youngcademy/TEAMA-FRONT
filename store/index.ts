@@ -1,6 +1,6 @@
 import { configureStore, ThunkAction } from "@reduxjs/toolkit";
 import { Context, createWrapper } from "next-redux-wrapper";
-import counterReducer from "./modules/counter";
+import counterReducer from "./slices/counter";
 import logger from "redux-logger";
 import { Action } from "redux";
 
