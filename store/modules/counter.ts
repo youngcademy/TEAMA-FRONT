@@ -29,7 +29,6 @@ export const counterSlice = createSlice({
       if (!action.payload.counter.number) {
         return state;
       }
-      console.log("HYDRATE", action.payload.counter.number);
       state.number = action.payload.counter.number;
     },
   },
