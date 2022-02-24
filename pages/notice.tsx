@@ -3,15 +3,10 @@ import Head from "next/head";
 import { Grid, Box, Button} from '@mui/material';
 import Item from "../components/notice_components/Item";
 import { useRouter } from "next/router";
-import Select from "../components/notice_components/Select";
-import MyBtn from '../components/notice_components/UndoBtn';
-import WriteBtn from "../components/notice_components/WritingBtn";
+import Select from "../components/notice_components/select2";
 import NotiTable from "../components/notice_components/NotificationTable";
-import SearchText from "../components/notice_components/SearchTextField";
 import SearchOption from "../components/notice_components/SearchOptionSelect";
 import InputText from "../components/notice_components/InputTextwIcon";
-import names from "../components/notice_components/Select";
-import { toNamespacedPath } from 'path/posix';
 
 export default function notice () {
     const router = useRouter();
@@ -27,12 +22,9 @@ export default function notice () {
                 flexGrow: 1 }}
             >
                 {/*1열 : 공지사항 종류 검색 + return 버튼*/}
-                <Box sx={{flexWrap: 'wrap', minWidth: 'min-content',  gridRow: '1', gridColumn: '1/6' }}>
+                <Box sx={{flexWrap: 'wrap', minWidth: 'min-content',  gridRow: '1', gridColumn:"1/12"}}>
                     <Select/>
                 </Box>
-                <Item sx={{ gridRow: '1', gridColumn: '11/12', justifyContent: 'center'}}>
-                    <MyBtn />
-                </Item>
                 {/*2열 : 공지사항 종류, 위의 Select 내부 값을 받아서*/}
                 <Item sx={{ gridRow: '2', gridColumn: '1/12' }}>
                     공지사항 종류

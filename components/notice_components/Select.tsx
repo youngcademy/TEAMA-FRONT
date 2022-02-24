@@ -24,9 +24,6 @@ const names = [
   "Caution",
 ];
 
-///////////////////////////////////////////////////////////////
-
-
 function getStyles(name: string, personName: string[], theme: Theme) {
   return {
     fontWeight:

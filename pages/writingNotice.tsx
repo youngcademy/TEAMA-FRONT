@@ -1,17 +1,13 @@
 import React from 'react';
 import Head from "next/head";
-import { Grid, Box, Button} from '@mui/material';
+import {Box} from '@mui/material';
 import Item from "../components/notice_components/Item";
 import { useRouter } from "next/router";
 import Select from "../components/notice_components/Select";
-import MyBtn from '../components/notice_components/UndoBtn';
 import Ebtn from "../components/notice_components/EnrollBtn";
 import TempBtn from "../components/notice_components/TmprBtn";
-import InputText from "../components/notice_components/InputText";
-import TextArea from "../components/notice_components/TextArea";
 import OneInput from "../components/notice_components/OneInput";
 import ExitBtn from "../components/notice_components/ExitBtn";
-import TT from "../components/notice_components/TestText";
 import TextEditor from '../components/notice_components/TextEditor';
 import 'react-quill/dist/quill.snow.css'
 
