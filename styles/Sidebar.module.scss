@@ -1,10 +1,13 @@
 .wrapper {
-  height: 100vh;
   background-color: black;
   width: 96px;
   transition: all 0.3s ease;
-
+  overflow: hidden;
   ul {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
     margin: 0;
     padding: 0;
     list-style: none;
