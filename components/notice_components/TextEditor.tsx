@@ -52,5 +52,5 @@ const formats = [
 ]
 
 export default function Home() {
-  return <QuillNoSSRWrapper modules={modules} formats={formats} theme="snow" style={{height:"400px", minWidth:"600px"}} />
+  return <QuillNoSSRWrapper modules={modules} formats={formats} theme="snow" style={{height:"300px", minWidth:"600px"}} />
 }

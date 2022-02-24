@@ -82,22 +82,6 @@ export default function NotificationSelect() {
             </Select>
         </FormControl>
         </Box>
-        <Item sx={{display: 'inline-block', position : 'fixed', right: '30px'}}>
-            <UndoBtn/>
-        </Item>
-        <Box sx ={{display: 'inline-block', 
-                  textAlign:'center',
-                  fontWeight:'700', 
-                  fontSize:'45px',
-                  width:'100%', 
-                  position:'absoulte', 
-                  top:'50%', 
-                  left:'50%',
-                  borderbottom: '5px solid lime',
-                  marginBottom: '5px',
-                  color: '#24ccff'}}>
-            {notificationName}
-        </Box>
     </div>
   );
 }

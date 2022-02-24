@@ -25,15 +25,11 @@ export default function notice () {
                 <Box sx={{flexWrap: 'wrap', minWidth: 'min-content',  gridRow: '1', gridColumn:"1/12"}}>
                     <Select/>
                 </Box>
-                {/*2열 : 공지사항 종류, 위의 Select 내부 값을 받아서*/}
-                <Item sx={{ gridRow: '2', gridColumn: '1/12' }}>
-                    공지사항 종류
-                </Item>
                 {/*3열 : 검색 조건, 검색 키워드, 검색 버튼*/}
-                <Item sx={{ gridRow: '3', gridColumn: '3/5', minWidth: 'min-content', justifyContent: "right"}}>
+                <Item sx={{ gridRow: '2', gridColumn: '3/5', minWidth: 'min-content', justifyContent: "right"}}>
                     <SearchOption/>
                 </Item>
-                <Item sx={{flexWrap: 'wrap', minWidth: 'min-content', gridRow: '3', gridColumn: '5/9', alignItems: 'end'}}>
+                <Item sx={{flexWrap: 'wrap', minWidth: 'min-content', gridRow: '2', gridColumn: '5/9', alignItems: 'end'}}>
                     <InputText/>
                 </Item>
                 {/*4열 : 번호, 태그, 제목, 작성자 등 분류 조건+작성자,작성일, 조회수
