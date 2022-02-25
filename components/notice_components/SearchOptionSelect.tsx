@@ -1,75 +1,55 @@
 import * as React from 'react';
-import { Theme, useTheme } from '@mui/material/styles';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { Grid, Box, Button} from '@mui/material';
+import TextField from '@mui/material/TextField';
+import { Theme, useTheme } from '@mui/material/styles';
 
+// 아이템과 메뉴의 스타일, 높이를 지정
 
-const MenuProps = {
-  PaperProps: {
-    style: {
-      width: 200
-    },
+const options = [
+  {
+    value: 'Title',
+    label: 'Title',
   },
-};
-
-const names = [
-  "Title",
-  "Writer",
-  "tag",
+  {
+    value: 'Writer',
+    label: 'Writer',
+  },
+  {
+    value: 'tag',
+    label: 'tag',
+  },
 ];
 
-///////////////////////////////////////////////////////////////
-
-
-function getStyles(name: string, personName: string[], theme: Theme) {
-  return {
-    fontWeight:
-      personName.indexOf(name) === -1
-        ? theme.typography.fontWeightRegular
-        : theme.typography.fontWeightMedium,
-  };
-}
-
-export default function SearchOptionSelect() {
+//NotificationSelect라는 이름으로 생성
+export default function SelectOptions() {
   const theme = useTheme();
-  const [optionName, setOptionName] = React.useState<string[]>([]);
+  const [searchOptions, setsearchOptions] = React.useState('');
 
-  const handleChange = (event: SelectChangeEvent<typeof optionName>) => {
-    const {
-      target: { value },
-    } = event;
-    setOptionName(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
-    );
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setsearchOptions(event.target.value);
   };
 
   return (
     <div>
-        <FormControl sx={{ m: 0, width: "100%" }}>
-            <InputLabel id="notification-name-label">Option</InputLabel>
-            <Select
-            labelId="notification-name-label"
-            id="notification-name"
-            value={optionName}
-            onChange={handleChange}
-            input={<OutlinedInput label="Name" />}
-            MenuProps={MenuProps}
-            >
-            {names.map((name) => (
-                <MenuItem
-                key={name}
-                value={name}
-                style={getStyles(name, optionName, theme)}
-                >
-                {name}
-                </MenuItem>
+            <Box sx ={{minWidth:'content'}}>
+              <TextField
+                  sx ={{width:200}}
+                  select
+                  id="demo-simple-select"
+                  label="notice"
+                  value={searchOptions}
+                  onChange={handleChange}
+              >
+                  {options.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
             ))}
-            </Select>
-        </FormControl>
-    </div>
+              </TextField>
+            </Box>
+      </div>
   );
 }

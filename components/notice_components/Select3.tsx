@@ -23,7 +23,7 @@ const MenuProps = {
 
 // 안에 들어갈 내용 생성
 const names = [
-    "",
+    "All Announcement",
     "General Announcement",
     "Special Announcement",
     "Event Announcement",

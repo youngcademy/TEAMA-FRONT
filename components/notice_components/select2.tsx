@@ -21,70 +21,56 @@ const MenuProps = {
     },
 };
 
-// 안에 들어갈 내용 생성
 const names = [
-    "",
-    "General Announcement",
-    "Special Announcement",
-    "Event Announcement",
-    "Caution",
+  {
+    value: 'Entire Announcement',
+    label: 'Entire Announcement',
+  },
+  {
+    value: 'Special Announcement',
+    label: 'Special Announcement',
+  },
+  {
+    value: 'Event Announcement',
+    label: 'Event Announcement',
+  },
+  {
+    value: 'Caution',
+    label: 'Caution',
+  },
 ];
 
-// 스타일 지정
-function getStyles(name: string, noticeName: string[], theme: Theme) {
-    return {
-      fontWeight:
-        noticeName.indexOf(name) === -1
-          ? theme.typography.fontWeightRegular
-          : theme.typography.fontWeightMedium,
-    };
-}
+//NotificationSelect라는 이름으로 생성
+export default function SelectNotices() {
+  const theme = useTheme();
+  const [notificationName, setNotificationName] = React.useState('');
 
-// 함수 생성
-export default function NotificationSelect() {
-    const theme = useTheme();
-    const [notificationName, setNotificationName] = React.useState<string[]>([]);
-  
-    const handleChange = (event: SelectChangeEvent<typeof notificationName>) => {
-        const {
-          target: { value },
-        } = event;
-        setNotificationName(
-          // On autofill we get a stringified value.
-          typeof value === 'string' ? value.split(',') : value,
-        );
-      };
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNotificationName(event.target.value);
+  };
 
   return (
     <div>
-        <Box sx={{display: 'inline', m: 1, minWidth: 240}}>
-        <FormControl sx={{ m: 1, width: 220 }}>
+        <FormControl sx={{ display:'inline', m: 1}}>
                 <InputLabel id="demo-simple-select-helper-label">
-                    Notice
                 </InputLabel>
-            <Select
-                labelId="notification-name-label"
-                id="notification-name"
-                value={notificationName}
-                onChange={handleChange}
-                input={<OutlinedInput label="Name" />}
-                MenuProps={MenuProps}
-            >
-                {names.map((names) => (
-                    <MenuItem
-                    key={names}
-                    value={names}
-                    style={getStyles(names, notificationName, theme)}
-                    >
-                    {names}
-                    </MenuItem>
-                ))}
-            </Select>
+            <Box sx ={{minWidth:'content'}}>
+              <TextField
+                  sx ={{width:200}}
+                  select
+                  id="demo-simple-select"
+                  label="notice"
+                  value={notificationName}
+                  onChange={handleChange}
+              >
+                  {names.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+              </TextField>
+            </Box>
         </FormControl>
-        </Box>
-        <Item sx={{display: 'inline-block', position : 'fixed', right: '30px'}}>
-            <UndoBtn/>
-        </Item>
         <Box sx ={{display: 'inline-block', 
                   textAlign:'center',
                   fontWeight:'700', 
@@ -94,8 +80,9 @@ export default function NotificationSelect() {
                   top:'50%', 
                   left:'50%',
                   borderbottom: '5px solid lime',
-                  marginBottom: '5px',
-                  color: '#24ccff'}}>
+                  marginBottom: '15px',
+                  color: 'Black',
+                  }}>
             {notificationName}
         </Box>
     </div>
