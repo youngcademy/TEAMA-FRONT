@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Link from 'next/link'
 
-export default function BasicButtons() {
+export default function WritingButtons() {
   return (
     <Stack spacing={2}>
       <Link href="/writingNotice" passHref>

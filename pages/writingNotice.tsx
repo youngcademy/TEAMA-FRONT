@@ -3,11 +3,11 @@ import Head from "next/head";
 import {Box} from '@mui/material';
 import Item from "../components/notice_components/Item";
 import { useRouter } from "next/router";
-import Select from "../components/notice_components/Select3";
-import Ebtn from "../components/notice_components/EnrollBtn";
-import TempBtn from "../components/notice_components/TmprBtn";
+import Select from "../components/notice_components/SelectOnlyNotices";
+import Ebtn from "../components/notice_components/BtnEnroll";
+import TempBtn from "../components/notice_components/BtnTempEnroll";
 import OneInput from "../components/notice_components/OneInput";
-import ExitBtn from "../components/notice_components/ExitBtn";
+import ExitBtn from "../components/notice_components/BtnExit";
 import TextEditor from '../components/notice_components/TextEditor';
 import 'react-quill/dist/quill.snow.css'
 

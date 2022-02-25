@@ -1,13 +1,13 @@
 import React from 'react';
 import Head from "next/head";
-import { Grid, Box, Button} from '@mui/material';
+import { Box } from '@mui/material';
 import Item from "../components/notice_components/Item";
 import { useRouter } from "next/router";
-import Select from "../components/notice_components/select2";
+import Select from "../components/notice_components/SelectNoticesWithProps";
 import NotiTable from "../components/notice_components/NotificationTable";
-import SearchOption from "../components/notice_components/SearchOptionSelect";
-import InputText from "../components/notice_components/InputTextwIcon";
-import UndoBtn from '../components/notice_components/UndoBtn';
+import SearchOption from "../components/notice_components/SelectSearchOptions";
+import InputText from "../components/notice_components/InputText";
+import UndoBtn from '../components/notice_components/BtnUndo';
 
 export default function notice () {
     const router = useRouter();
@@ -29,8 +29,6 @@ export default function notice () {
                 <Box sx={{flexWrap: 'wrap', minWidth: 'min-content',  gridRow: '1', gridColumn:"11/12"}}>
                    <UndoBtn/>
                 </Box>
-
-
                 {/*3열 : 검색 조건, 검색 키워드, 검색 버튼*/}
                 <Item sx={{ gridRow: '2', gridColumn: '3/5', minWidth: 'min-content', justifyContent: "right"}}>
                     <SearchOption/>

@@ -56,7 +56,7 @@ export default function SelectNotices() {
                 </InputLabel>
             <Box sx ={{minWidth:'content'}}>
               <TextField
-                  sx ={{width:200}}
+                  sx ={{width:240}}
                   select
                   id="demo-simple-select"
                   label="notice"
