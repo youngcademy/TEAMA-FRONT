@@ -1,33 +1,42 @@
 .wrapper {
-  height: 100vh;
   background-color: black;
   width: 96px;
   transition: all 0.3s ease;
-
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    color: white;
-    li {
+  .inner {
+    transition: all 0.3s ease;
+    display: flex;
+    width: 96px;
+    position: fixed;
+    ul {
       width: 100%;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      svg {
-        fill: white;
-        width: 24px;
-        height: 24px;
-      }
-      &:hover {
-        background-color: #536dfe;
+      flex: 1 0 auto;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: white;
+      li {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
         svg {
-          fill: black;
+          fill: white;
+          width: 24px;
+          height: 24px;
+        }
+        &:hover {
+          background-color: #536dfe;
+          svg {
+            fill: black;
+          }
         }
       }
     }
+  }
+  .open {
+    width: 150px;
   }
 }
 
