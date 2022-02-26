@@ -1,25 +1,13 @@
 import * as React from "react";
-import { Grid, Box, Button } from "@mui/material";
-import OutlinedInput from "@mui/material/OutlinedInput";
+import { Box } from "@mui/material";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import UndoBtn from "./BtnUndo";
-import Item from "./Item";
-import { Theme, useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 
 // 아이템과 메뉴의 스타일, 높이를 지정
 const ITEM_HEIGHT = 48;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5,
-      width: 250,
-    },
-  },
-};
 
 const names = [
   {
