@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,UAAU,EAAE,UAAU;EACtB,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,SAAS;EAClB,WAAW,EAAE,CAAC;EACd,QAAQ,EAAE,CAAC;EACX,aAAa,EAAE,CAAC;EAChB,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,QAAQ;EACrB,SAAS,EAAE,UAAU;CACxB",
+    "sources": [
+        "TextEditor.scss"
+    ],
+    "names": [],
+    "file": "TextEditor.css"
+}

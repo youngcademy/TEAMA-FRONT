@@ -1,0 +1,48 @@
+.wrapper {
+  height: 100vh;
+  background-color: black;
+  width: 96px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: white;
+}
+
+.wrapper ul li {
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.wrapper ul li svg {
+  fill: white;
+  width: 24px;
+  height: 24px;
+}
+
+.wrapper ul li:hover {
+  background-color: #536dfe;
+}
+
+.wrapper ul li:hover svg {
+  fill: black;
+}
+
+.active {
+  width: 150px;
+}
+/*# sourceMappingURL=Sidebar.module.css.map */
