@@ -1,0 +1,41 @@
+From 037aca30198a413c1207e42e2bb4ce8656e01ea3 Mon Sep 17 00:00:00 2001
+From: eric0516 <eric1123@naver.com>
+Date: Sat, 26 Feb 2022 23:14:00 +0900
+Subject: [PATCH] =?UTF-8?q?=EC=BD=94=EB=93=9C=EB=A6=AC=EB=B7=B0=EC=9A=A9?=
+ =?UTF-8?q?=20=ED=85=8C=EC=8A=A4=ED=8A=B8?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ components/notice/SelectNoticesWithProps.tsx | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/components/notice/SelectNoticesWithProps.tsx b/components/notice/SelectNoticesWithProps.tsx
+index 230ad62..dcda8d1 100644
+--- a/components/notice/SelectNoticesWithProps.tsx
++++ b/components/notice/SelectNoticesWithProps.tsx
+@@ -3,10 +3,8 @@ import { Box } from "@mui/material";
+ import InputLabel from "@mui/material/InputLabel";
+ import MenuItem from "@mui/material/MenuItem";
+ import FormControl from "@mui/material/FormControl";
+-import { useTheme } from "@mui/material/styles";
+ import TextField from "@mui/material/TextField";
+ 
+-// 아이템과 메뉴의 스타일, 높이를 지정
+ const ITEM_HEIGHT = 48;
+ 
+ const names = [
+@@ -28,9 +26,7 @@ const names = [
+   },
+ ];
+ 
+-//NotificationSelect라는 이름으로 생성
+ export default function SelectNotices() {
+-  const theme = useTheme();
+   const [notificationName, setNotificationName] = React.useState("");
+ 
+   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+-- 
+2.35.0.windows.1
+
