@@ -3,10 +3,8 @@ import { Box } from "@mui/material";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import { useTheme } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 
-// 아이템과 메뉴의 스타일, 높이를 지정
 const ITEM_HEIGHT = 48;
 
 const names = [
@@ -28,9 +26,7 @@ const names = [
   },
 ];
 
-//NotificationSelect라는 이름으로 생성
 export default function SelectNotices() {
-  const theme = useTheme();
   const [notificationName, setNotificationName] = React.useState("");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
