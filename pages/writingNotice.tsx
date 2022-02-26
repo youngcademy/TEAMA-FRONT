@@ -1,14 +1,14 @@
 import React from 'react';
 import Head from "next/head";
 import {Box} from '@mui/material';
-import Item from "../components/notice_components/Item";
+import Item from "../components/notice/Item";
 import { useRouter } from "next/router";
-import Select from "../components/notice_components/SelectOnlyNotices";
-import Ebtn from "../components/notice_components/BtnEnroll";
-import TempBtn from "../components/notice_components/BtnTempEnroll";
-import OneInput from "../components/notice_components/OneInput";
-import ExitBtn from "../components/notice_components/BtnExit";
-import TextEditor from '../components/notice_components/TextEditor';
+import Select from "../components/notice/SelectOnlyNotices";
+import Ebtn from "../components/notice/BtnEnroll";
+import TempBtn from "../components/notice/BtnTempEnroll";
+import OneInput from "../components/notice/OneInput";
+import ExitBtn from "../components/notice/BtnExit";
+import TextEditor from '../components/notice/TextEditor';
 import 'react-quill/dist/quill.snow.css'
 
 export default function notice () {
