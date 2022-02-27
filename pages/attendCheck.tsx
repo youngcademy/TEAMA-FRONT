@@ -1,7 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import TabList from "../../../components/attend/TabList";
+import TabList from "../components/attend/TabList";
 
 const attendmendCheckAdmin = () => {
   return (
