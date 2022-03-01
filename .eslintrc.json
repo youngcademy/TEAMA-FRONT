@@ -1,4 +1,17 @@
 {
+<<<<<<< HEAD
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/babel",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    // I suggest you add those two rules:
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error"
+=======
   "parser": "@typescript-eslint/parser",
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "extends": [
@@ -23,5 +36,6 @@
     "react": {
       "version": "detect"
     }
+>>>>>>> 0616c6bdbd2898784c949727a3c6315d0c6a02df
   }
 }
