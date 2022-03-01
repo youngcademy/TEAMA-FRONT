@@ -391,6 +391,14 @@
   dependencies:
     "parchment" "^1.1.2"
 
+"@types/react-big-calendar@^0.36.2":
+  "integrity" "sha512-grXQJgeHWXhgcipRB28NnUwIhD6aAKFs7IacGwy2+33hC8yAcR62nsW73aa25K3qxU8RxoLflKSCrsm4QCQpuQ=="
+  "resolved" "https://registry.npmjs.org/@types/react-big-calendar/-/react-big-calendar-0.36.2.tgz"
+  "version" "0.36.2"
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/react" "*"
+
 "@types/react-is@^16.7.1 || ^17.0.0":
   "integrity" "sha512-aBTIWg1emtu95bLTLx0cpkxwGW3ueZv71nE2YFBpL8k/z5czEW8yYpOo8Dp+UUAFAtKwNaOsh/ioSeQnWlZcfw=="
   "resolved" "https://registry.npmjs.org/@types/react-is/-/react-is-17.0.3.tgz"
