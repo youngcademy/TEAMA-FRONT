@@ -3,7 +3,6 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Calender from "./Calender";
 import Button from "@mui/material/Button";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
@@ -75,7 +74,6 @@ export default function BasicTabs() {
             Today: {`${year} / ${month} / ${day}`}
           </Typography>
           <Box sx={{ display: "flex" }}>
-            <Calender />
             <Button
               variant="contained"
               sx={{

@@ -15,14 +15,14 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal({ text, children }: any) {
+export default function BagicModal({ name }: any, { children }: any) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
     <div>
-      <Button onClick={handleOpen}>{text}</Button>
+      <Button onClick={handleOpen}>{name}</Button>
       <Modal
         open={open}
         onClose={handleClose}
