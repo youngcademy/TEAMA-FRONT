@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "plugins": ["@typescript-eslint"],
   "extends": [
     "next/babel",
@@ -10,5 +11,25 @@
     // I suggest you add those two rules:
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error"
+=======
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-constant-condition": ["error", { "checkLoops": false }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+>>>>>>> 0616c6bdbd2898784c949727a3c6315d0c6a02df
   }
 }

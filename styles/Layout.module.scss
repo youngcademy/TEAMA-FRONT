@@ -1,7 +1,9 @@
 .wrapper {
   display: flex;
+  margin-top: 64px;
   .content {
     padding: 20px;
-    flex: 1;
+    flex: 1 0 auto;
+    height:auto;
   }
 }
