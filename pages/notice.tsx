@@ -8,6 +8,7 @@ import NotiTable from "../components/notice/NotificationTable";
 import SearchOption from "../components/notice/SelectSearchOptions";
 import InputText from "../components/notice/InputText";
 import UndoBtn from "../components/notice/Button/BtnUndo";
+import ButtonTitle from "../components/notice/Button/Buttons";
 
 export default function notice() {
   const router = useRouter();
@@ -43,7 +44,7 @@ export default function notice() {
             gridColumn: "11/12",
           }}
         >
-          <UndoBtn />
+          <ButtonTitle />
         </Box>
         {/*3열 : 검색 조건, 검색 키워드, 검색 버튼*/}
         <Item
