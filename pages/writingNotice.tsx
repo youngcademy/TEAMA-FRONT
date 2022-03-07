@@ -8,11 +8,16 @@ import Ebtn from "../components/notice/Button/BtnEnroll";
 import TempBtn from "../components/notice/Button/BtnTempEnroll";
 import OneInput from "../components/notice/OneInput";
 import ExitBtn from "../components/notice/Button/BtnExit";
-import TextEditor from "../components/notice/TextEditor";
-import "react-quill/dist/quill.snow.css";
+import dynamic from "next/dynamic";
+import "@toast-ui/editor/dist/toastui-editor.css";
 
 export default function notice() {
+  const PostEditor = dynamic(
+    () => import("../components/notice/ToastTextEditor"),
+    { ssr: false }
+  );
   const router = useRouter();
+
   return (
     <>
       <Head>
@@ -77,7 +82,7 @@ export default function notice() {
             Height: "min-content",
           }}
         >
-          <TextEditor />
+          <PostEditor />
         </Box>
         <Box
           sx={{
