@@ -20,7 +20,12 @@ import Switch from "@mui/material/Switch";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
-import WriteBtn from "./Button/BtnWriting";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import Link from "next/link";
+
+const HrefList: string[] = ["/", "writingNotice", "/notice"];
+const TitleList: string[] = ["Enroll", "TempEnroll", "Exit"];
 
 interface Data {
   calories: number;
@@ -431,7 +436,13 @@ export default function EnhancedTable() {
             right: "20px",
           }}
         >
-          <WriteBtn />
+          <Stack spacing={2}>
+            <Link href="/writingNotice" passHref>
+              <Button variant="outlined" color="primary">
+                글쓰기
+              </Button>
+            </Link>
+          </Stack>
         </Box>
       </Box>
     </Box>

@@ -11,15 +11,16 @@ enum ButtonTitle {
   Writing = "Writing",
 }
 
-export default function Buttons() {
-  const HrefList: string[] = ["/", "writingNotice", "/notice"];
-  const TitleList: string[] = ["Enroll", "TempEnroll"];
+const HrefList: string[] = ["/", "writingNotice", "/notice"];
+const TitleList: string[] = ["Enroll", "TempEnroll"];
+
+export default function Buttons(HrefList:string,TitleList:string) {
 
   return (
     <Stack spacing={2}>
-      <Link href={HrefList[1]} passHref>
+      <Link href={HrefList[]} passHref>
         <Button variant="outlined" color="primary">
-          {TitleList[1]}
+          {TitleList[]}
         </Button>
       </Link>
     </Stack>

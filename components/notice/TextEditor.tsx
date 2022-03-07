@@ -3,9 +3,9 @@ import dynamic from "next/dynamic";
 const QuillNoSSRWrapper = dynamic(import("react-quill"), {
   ssr: false,
   loading: () => (
-    <p style={{ border: "1px", color: "red" }}>
+    <div style={{ border: "1px", color: "red" }}>
       <div>Loading ...</div>
-    </p>
+    </div>
   ),
 });
 
