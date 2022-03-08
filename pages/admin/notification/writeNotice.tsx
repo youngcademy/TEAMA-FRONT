@@ -2,16 +2,18 @@ import React from "react";
 import Head from "next/head";
 import { Box } from "@mui/material";
 import Item from "../../../components/notice/Item";
-import { useRouter } from "next/router";
 import Select from "../../../components/notice/SelectOnlyNotices";
 import Ebtn from "../../../components/notice/Button/BtnEnroll";
 import TempBtn from "../../../components/notice/Button/BtnTempEnroll";
 import OneInput from "../../../components/notice/OneInput";
 import ExitBtn from "../../../components/notice/Button/BtnExit";
-import "react-quill/dist/quill.snow.css";
-
+import dynamic from "next/dynamic";
 export default function notice() {
-  const router = useRouter();
+  const PostEditor = dynamic(
+    () => import("../../../components/notice/ToastTextEditor"),
+    { ssr: false }
+  );
+
   return (
     <>
       <Head>
@@ -75,7 +77,9 @@ export default function notice() {
             maxWidth: "900px",
             Height: "min-content",
           }}
-        ></Box>
+        >
+          <PostEditor />
+        </Box>
         <Box
           sx={{
             gridRow: "4",
