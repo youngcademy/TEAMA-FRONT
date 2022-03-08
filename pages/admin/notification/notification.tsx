@@ -1,11 +1,10 @@
 import Head from "next/head";
 import { Box } from "@mui/material";
-import Item from "../components/notice/Item";
-import { useRouter } from "next/router";
-import Select from "../components/notice/SelectNoticesWithProps";
-import NotiTable from "../components/notice/NotificationTable";
-import SearchOption from "../components/notice/SelectSearchOptions";
-import InputText from "../components/notice/InputText";
+import Item from "../../../components/notice/Item";
+import Select from "../../../components/notice/SelectNoticesWithProps";
+import NotiTable from "../../../components/notice/NotificationTable";
+import SearchOption from "../../../components/notice/SelectSearchOptions";
+import InputText from "../../../components/notice/InputText";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Link from "next/link";

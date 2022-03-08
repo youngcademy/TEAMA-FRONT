@@ -15,7 +15,7 @@ const style = {
   p: 4,
 };
 
-export default function BagicModal({ name }: any, { children }: any) {
+export default function BagicModal({ name }: string, { children }: ChildNode) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

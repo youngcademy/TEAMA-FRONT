@@ -1,22 +1,19 @@
 import React from "react";
 import Head from "next/head";
 import { Box } from "@mui/material";
-import Item from "../components/notice/Item";
-import { useRouter } from "next/router";
-import Select from "../components/notice/SelectOnlyNotices";
-import Ebtn from "../components/notice/Button/BtnEnroll";
-import TempBtn from "../components/notice/Button/BtnTempEnroll";
-import OneInput from "../components/notice/OneInput";
-import ExitBtn from "../components/notice/Button/BtnExit";
+import Item from "../../../components/notice/Item";
+import Select from "../../../components/notice/SelectOnlyNotices";
+import Ebtn from "../../../components/notice/Button/BtnEnroll";
+import TempBtn from "../../../components/notice/Button/BtnTempEnroll";
+import OneInput from "../../../components/notice/OneInput";
+import ExitBtn from "../../../components/notice/Button/BtnExit";
 import dynamic from "next/dynamic";
-import "@toast-ui/editor/dist/toastui-editor.css";
 
 export default function notice() {
   const PostEditor = dynamic(
-    () => import("../components/notice/ToastTextEditor"),
+    () => import("../../../components/notice/ToastTextEditor"),
     { ssr: false }
   );
-  const router = useRouter();
 
   return (
     <>
