@@ -10,14 +10,11 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Link from "next/link";
 import * as React from "react";
-import UndoIcon from "@mui/icons-material/Undo";
-import Tooltip from "@mui/material/Tooltip";
 
 const HrefList: string[] = ["/", "writingNotice", "/notice"];
 const TitleList: string[] = ["Enroll", "TempEnroll", "Exit", "Undo"];
 
 export default function notice() {
-  const router = useRouter();
   return (
     <>
       <Head>
