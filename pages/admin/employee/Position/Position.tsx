@@ -6,8 +6,8 @@ import { Grid, Box } from "@material-ui/core";
 import Button from "@mui/material/Button";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import TreeView from "@mui/lab/TreeView";
-import TreeItem from "@mui/lab/TreeItem";
+// import TreeView from "@mui/lab/TreeView";
+// import TreeItem from "@mui/lab/TreeItem";
 import styles from "../styles/Position.module.scss";
 
 function Position() {
@@ -62,7 +62,7 @@ function Position() {
         disableSelectionOnClick
         isRowSelectable={(params: any) => params.row.OrderAmount > 1}
       />
-      <TreeView
+      {/* <TreeView
         aria-label="file system navigator"
         defaultCollapseIcon={<ExpandMoreIcon />}
         defaultExpandIcon={<ChevronRightIcon />}
@@ -77,7 +77,7 @@ function Position() {
             <TreeItem nodeId="8" label="index.js" />
           </TreeItem>
         </TreeItem>
-      </TreeView>
+      </TreeView> */}
     </div>
   );
 }

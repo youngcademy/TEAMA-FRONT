@@ -8,7 +8,6 @@ import Ebtn from "../../../components/notice/Button/BtnEnroll";
 import TempBtn from "../../../components/notice/Button/BtnTempEnroll";
 import OneInput from "../../../components/notice/OneInput";
 import ExitBtn from "../../../components/notice/Button/BtnExit";
-import TextEditor from "../../../components/notice/TextEditor";
 import "react-quill/dist/quill.snow.css";
 
 export default function notice() {
@@ -76,9 +75,7 @@ export default function notice() {
             maxWidth: "900px",
             Height: "min-content",
           }}
-        >
-          <TextEditor />
-        </Box>
+        ></Box>
         <Box
           sx={{
             gridRow: "4",
