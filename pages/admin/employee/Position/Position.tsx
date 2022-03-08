@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import { columns } from "../../components/grid/position/columns";
-import { rows } from "../../components/grid/position/row";
+import { columns } from "../../../../components/grid/position/columns";
+import { rows } from "../../../../components/grid/position/row";
 import { Grid, Box } from "@material-ui/core";
 import Button from "@mui/material/Button";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";

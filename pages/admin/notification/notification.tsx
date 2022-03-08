@@ -1,13 +1,13 @@
 import React from "react";
 import Head from "next/head";
 import { Box } from "@mui/material";
-import Item from "../components/notice/Item";
+import Item from "../../../components/notice/Item";
 import { useRouter } from "next/router";
-import Select from "../components/notice/SelectNoticesWithProps";
-import NotiTable from "../components/notice/NotificationTable";
-import SearchOption from "../components/notice/SelectSearchOptions";
-import InputText from "../components/notice/InputText";
-import UndoBtn from "../components/notice/Button/BtnUndo";
+import Select from "../../../components/notice/SelectNoticesWithProps";
+import NotiTable from "../../../components/notice/NotificationTable";
+import SearchOption from "../../../components/notice/SelectSearchOptions";
+import InputText from "../../../components/notice/InputText";
+import UndoBtn from "../../../components/notice/Button/BtnUndo";
 
 export default function notice() {
   const router = useRouter();

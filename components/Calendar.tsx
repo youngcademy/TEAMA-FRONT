@@ -48,7 +48,7 @@ function SelectableCalendar({ localizer }: Props) {
     const title = window.prompt("New Event name");
 
     if (title) {
-      let newEvent = {} as CalendarEvent;
+      const newEvent = {} as CalendarEvent;
       newEvent.start = moment(start).toDate();
       newEvent.end = moment(end).toDate();
       newEvent.title = title;
@@ -61,9 +61,9 @@ function SelectableCalendar({ localizer }: Props) {
   };
 
   const today = new Date();
-  const year = today.getFullYear();
-  const month = today.getDay();
-  const day = today.getDate();
+  // const year = today.getFullYear();
+  // const month = today.getDay();
+  // const day = today.getDate();
 
   return (
     <>
