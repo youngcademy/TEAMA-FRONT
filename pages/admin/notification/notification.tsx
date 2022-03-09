@@ -1,16 +1,19 @@
-import React from "react";
 import Head from "next/head";
 import { Box } from "@mui/material";
-import Item from "../components/notice/Item";
-import { useRouter } from "next/router";
-import Select from "../components/notice/SelectNoticesWithProps";
-import NotiTable from "../components/notice/NotificationTable";
-import SearchOption from "../components/notice/SelectSearchOptions";
-import InputText from "../components/notice/InputText";
-import UndoBtn from "../components/notice/Button/BtnUndo";
+import Item from "../../../components/notice/Item";
+import Select from "../../../components/notice/SelectNoticesWithProps";
+import NotiTable from "../../../components/notice/NotificationTable";
+import SearchOption from "../../../components/notice/SelectSearchOptions";
+import InputText from "../../../components/notice/InputText";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import Link from "next/link";
+import * as React from "react";
+
+const HrefList: string[] = ["/", "writingNotice", "/notice"];
+const TitleList: string[] = ["Enroll", "TempEnroll", "Exit", "Undo"];
 
 export default function notice() {
-  const router = useRouter();
   return (
     <>
       <Head>
@@ -43,7 +46,16 @@ export default function notice() {
             gridColumn: "11/12",
           }}
         >
-          <UndoBtn />
+          <Stack spacing={2}>
+            <Link href={HrefList[0]} passHref>
+              <Button
+                variant="outlined"
+                sx={{ position: "absolute", right: "20px" }}
+              >
+                {TitleList[3]}
+              </Button>
+            </Link>
+          </Stack>
         </Box>
         {/*3열 : 검색 조건, 검색 키워드, 검색 버튼*/}
         <Item

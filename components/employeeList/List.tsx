@@ -1,8 +1,4 @@
-import * as React from "react";
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
-import Modal from "./Modal";
-import InnerModar from "./InnerModar";
-import Switch from "@mui/material/Switch";
+import { GridColDef } from "@mui/x-data-grid";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
@@ -21,7 +17,7 @@ const columns: GridColDef[] = [
   {
     field: "healthCertificate",
     headerName: "Health Certificate",
-    width: 110,
+    width: 150,
     editable: true,
   },
   {
@@ -50,72 +46,60 @@ const rows = [
   {
     id: 2,
     name: "Lannister",
-    phoneNumber: "010-1111-1111",
+    phoneNumber: "010-2222-2222",
     healthCertificate: "O",
     join: "2022/01/31",
   },
   {
     id: 3,
     name: "Lannister",
-    phoneNumber: "010-1111-1111",
+    phoneNumber: "010-3333-3333",
     healthCertificate: "X",
     join: "2019/06/27",
   },
   {
     id: 4,
     name: "Stark",
-    phoneNumber: "010-1111-1111",
+    phoneNumber: "010-4444-4444",
     healthCertificate: "O",
     join: "2020/04/02",
   },
   {
     id: 5,
     name: "Targaryen",
-    phoneNumber: "010-1111-1111",
+    phoneNumber: "010-5555-5555",
     healthCertificate: "O",
     join: "2021/07/16",
   },
   {
     id: 6,
     name: "Melisandre",
-    phoneNumber: "010-1111-1111",
+    phoneNumber: "010-6666-6666",
     healthCertificate: "O",
     join: "2021/05/21",
   },
   {
     id: 7,
     name: "Clifford",
-    phoneNumber: "010-1111-1111",
+    phoneNumber: "010-7777-7777",
     healthCertificate: "X",
     join: "2021/05/12",
   },
   {
     id: 8,
     name: "Frances",
-    phoneNumber: "010-1111-1111",
+    phoneNumber: "010-8888-8888",
     healthCertificate: "O",
     join: "2021/08/09",
   },
   {
     id: 9,
     name: "Roxie",
-    phoneNumber: "010-1111-1111",
+    phoneNumber: "010-9999-9999",
     healthCertificate: "O",
     join: "2021/03/15",
   },
 ];
 
-export default function List() {
-  return (
-    <div style={{ height: 400, width: "100%" }}>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-        disableSelectionOnClick
-      />
-    </div>
-  );
-}
+export const Rows = rows;
+export const Columns = columns;
