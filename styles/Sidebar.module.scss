@@ -1,5 +1,4 @@
 .wrapper {
-  background-color: black;
   width: 96px;
   transition: all 0.3s ease;
   .inner {
@@ -7,6 +6,8 @@
     display: flex;
     width: 96px;
     position: fixed;
+    height: 100vh;
+    background-color: black;
     ul {
       width: 100%;
       flex: 1 0 auto;
