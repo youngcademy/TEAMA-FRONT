@@ -38,7 +38,6 @@ const names = [
 
 //NotificationSelect라는 이름으로 생성
 export default function SelectNotices() {
-  const theme = useTheme();
   const [notificationName, setNotificationName] = React.useState("");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
