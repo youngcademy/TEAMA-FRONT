@@ -42,14 +42,25 @@ const Login = ({ users }: IUsersProps) => {
 
   const onSubmit = () => {
     console.log(Id, Password);
+    axios
+      .post("/*", {
+        id: Id,
+        password: Password,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
   return (
     <div>
       {users.map((users, index) => (
         <h3 key={index}>{users.name}</h3>
       ))}
-      <input onChange={onChangeId} value={Id} />
-      <input type={"password"} onChange={onChangePW} value={Password} />
+      <input type="text" onChange={onChangeId} value={Id} />
+      <input type="password" onChange={onChangePW} value={Password} />
       <button onClick={onSubmit}>전송</button>
     </div>
   );
